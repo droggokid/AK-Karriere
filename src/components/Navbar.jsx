@@ -1,8 +1,8 @@
 import Reach, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../logo.svg';
-import { Button } from '@material-ui/core';
+import logo from '../logo.png';
 import './Navbar.css';
+import Button from './Button';
 
 function Navbar() {
     const [click, setClick] = useState(false);

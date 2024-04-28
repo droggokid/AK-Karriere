@@ -17,26 +17,3 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
-nav {
-  background-color: #242424;
-  padding: 1em;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  position: absolute; /* Add this */
-  top: 0; /* Add this */
-  right: 0; /* Add this */
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav ul li {
-  color: #ffffff;
-  padding: 0.5em;
-}

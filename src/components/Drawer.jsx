@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import {
+    Divider,
   Drawer,
   IconButton,
   List,
   ListItem,
   ListItemText,
- makeStyles
+  makeStyles,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(()=>({
     link:{
@@ -21,7 +24,7 @@ const useStyles = makeStyles(()=>({
 }));
 
 function DrawerComponent() {
-const classes = useStyles();
+    const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
     <>
@@ -30,29 +33,33 @@ const classes = useStyles();
         onClose={() => setOpenDrawer(false)}
       >
         <List>
-         <ListItem onClick={() => setOpenDrawer(false)}>
+        <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/">Home</Link>
+              <Link to="/" className={classes.link}>Home</Link>
             </ListItemText>
           </ListItem>
+          <Divider/>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">About</Link>
+              <Link to="/about" className={classes.link}>About</Link>
             </ListItemText>
           </ListItem>
+          <Divider/>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" className={classes.link}>Contact</Link>
             </ListItemText>
           </ListItem>
+          <Divider/>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">Faq</Link>
+              <Link to="/about" className={classes.link}>Faq</Link>
             </ListItemText>
           </ListItem>
+          <Divider/>
         </List>
       </Drawer>
-      <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
+      <IconButton onClick={() => setOpenDrawer(!openDrawer)}className={classes.icon}>
         <MenuIcon />
       </IconButton>
     </>

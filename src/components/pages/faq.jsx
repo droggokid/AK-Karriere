@@ -1,7 +1,8 @@
 import React from 'react';
+import '../../App.css';
 
-function Faq() {
-  return <h1>Faq Page</h1>;
+
+export default function Faq() {
+  return <h1 className='faq'>FAQ</h1>;
 }
 
-export default Faq;

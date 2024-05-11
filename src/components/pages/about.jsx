@@ -1,7 +1,8 @@
 import React from 'react';
+import '../../App.css';
 
-function About() {
-  return <h1>About Page</h1>;
+
+export default function About() {
+  return <h1 className='about'>ABOUT</h1>;
 }
 
-export default About;

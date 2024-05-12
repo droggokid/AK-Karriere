@@ -5,23 +5,48 @@
     position: fixed;
     z-index: -1;
 }*/
-
-
 .Slogan {
-    font-size: 1.375rem;
-    color: #d38237;
+    color: #fff; /* Maintain a light color but ensure readability */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Increase shadow for better contrast */
+    font-size: 1.75rem; /* Check size responsiveness */
+    position: absolute;
+    width: 100%;
+    top: 7%; /* Adjust based on layout */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: fadeIn 2s ease-out;
 }
 
+
 .hero-container {
-    background: url('/images/section6.webp') center center/cover no-repeat;
+    position: relative; /* Add this */
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
+}
+
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .TitleContainer {
@@ -30,6 +55,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    animation: fadeInUp 1s ease-out;
 }
 
 .TitleLeftContainer, .TitleRightContainer {
@@ -43,21 +69,43 @@
 .TitleLeftContainer {
     top: 0;
     left: 0;
-    bottom: 55%;
+    bottom: 10%;
     right: 50%;
 }
 
 .TitleRightContainer {
-    top: 55%;
+    top: 0;
     left: 50%;
-    bottom: 0;
+    bottom: 10%;
     right: 0;
 }
 
 .TitleLeft, .TitleRight {
     font-size: 2.125rem;
     color: #D2B450;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.TextTopContainer {
+    position: absolute;
+    top: 0;
+    bottom: 60%; /* This will make it cover the top half of the section */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Change this to your preferred color */
+}
+
+.client-photo {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    height: 30%; /* Adjust based on the photo and design */
+    width: auto;
+    border-radius: 5px; /* Soften edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Enhance depth */
+    z-index: 10; /* Ensure it's above the background but below text */
 }
 
 .hero-container > h1 {
@@ -93,6 +141,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .Slogan {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
     .TitleLeft, .TitleRight {
         font-size: 1.5rem;
     }
@@ -121,5 +173,16 @@
     .btn--large, .btn--medium {
         font-size: 1rem;
         padding: 0.75rem 1.5rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

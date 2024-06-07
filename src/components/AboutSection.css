@@ -1,0 +1,23 @@
+.about {
+  padding: 2rem;
+  background-color: #f8f9fa; 
+  text-align: left;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem; 
+  color: #343a40; 
+  display: block; /* Ensure it's a block-level element */
+  clear: both; /* Clear any floating elements */
+}
+
+.about p {
+  font-size: 1rem; 
+  color: #555;
+  line-height: 1.5; 
+  margin-bottom: 1.5rem; 
+}

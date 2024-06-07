@@ -1,0 +1,38 @@
+.intro-section {
+    display: flex;
+    align-items: center;
+    padding: 10rem;
+    background-color: #e9ecef;
+  }
+  
+  .intro-text {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+.intro-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.intro-text p {
+    font-size: 1.25rem;
+    color: #555;
+    text-align: center;
+}
+  
+  .intro-image {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  

@@ -1,0 +1,136 @@
+.service-container {
+    position: relative;
+    height: 80vh; /* Adjust height for scaling */
+    width: 90%; /* Limit width to 90% of the screen */
+    max-width: 1400px; /* Maximum width for large screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Center the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    overflow: hidden;
+}
+
+.service-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+.title-left-container, .title-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.title-left-container {
+    grid-column: 1;
+}
+
+.title-right-container {
+    grid-column: 2;
+}
+
+.title-left, .title-right {
+    font-size: 1.75rem;
+    color: #D2B450;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.slogan {
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+    margin: 0;
+}
+
+.service-btns {
+    margin-top: 10px;
+}
+
+.service-btns .btn {
+    margin: 0.375rem;
+}
+
+@media screen and (max-width: 960px) {
+    .title-left, .title-right {
+        font-size: 1.5rem;
+    }
+
+    .slogan {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .title-left-container, .title-right-container {
+        padding: 10px;
+    }
+
+    .title-left, .title-right {
+        font-size: 1.25rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

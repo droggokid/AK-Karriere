@@ -1,0 +1,33 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo-circle {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-initials {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .logo-text {
+    margin-left: 15px;
+  }
+  
+  .logo-name {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  

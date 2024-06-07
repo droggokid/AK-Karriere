@@ -1,13 +1,17 @@
 import React from 'react';
-import '../../App.css';
-import Section from '../Section';
+
+import ServiceSection from '../ServiceSection';
 import Cards from '../Cards';
 import Footer from '../Footer';
+import IntroSection from '../IntroSection';
+import AboutSection from '../AboutSection';
 
 function Home() {
   return (
     <>
-      <Section />
+      <IntroSection />
+      <AboutSection />
+      <ServiceSection />
       <Cards />
       <Footer />
     </>
